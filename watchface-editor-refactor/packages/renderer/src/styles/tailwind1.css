@@ -1,0 +1,6 @@
+@import url('https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin&display=swap');
+/* 
+* tailwind.css
+* 为防止antd覆盖tailwind样式，tailwind功能需要拆开引入
+*/
+@tailwind base;

@@ -1,0 +1,11 @@
+include: https://git.n.xiaomi.com/miui_security_fe/gitlab-ci-template/-/raw/master/fds.yml
+
+variables:
+  # PROJECT_TEST_SCRIPT: pnpm lint && pnpm build:web
+  PROJECT_BOOTSTRAP_SCRIPT: yarn install
+  PROJECT_BUILD_SCRIPT: yarn build:renderer
+  PROJECT_TARGET_DIR: dist/renderer
+  FDS_ENDPOINT_PRODUCTION: cnbj1-fds.api.xiaomi.net
+  FDS_BUCKET_STAGING: watchface-editor-renderer
+  FDS_BUCKET_PRODUCTION: watchface-editor-renderer
+  CI_APPROVER: yangxuemao@xiaomi.com

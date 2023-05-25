@@ -1,0 +1,6 @@
+/* 
+* tailwind2.css
+* 为防止antd覆盖tailwind样式，tailwind功能需要拆开引入
+*/
+@tailwind components;
+@tailwind utilities;

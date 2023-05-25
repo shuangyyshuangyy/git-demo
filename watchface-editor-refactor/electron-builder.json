@@ -1,0 +1,57 @@
+{
+  "productName": "表盘编辑器",
+  "directories": {
+    "output": "release/${version}"
+  },
+  "files": [
+    "dist/main",
+    "dist/preload"
+  ],
+  "mac": {
+    "hardenedRuntime": true,
+    "entitlements": "build/entitlements.mac.plist",
+    "entitlementsInherit": "build/entitlements.mac.plist",
+    "gatekeeperAssess": false,
+    "artifactName": "${productName}_${arch}_${version}.${ext}",
+    "target": [
+      {
+        "arch": [
+          "x64",
+          "arm64"
+        ],
+        "target": "zip"
+      }
+    ],
+    "icon": "build/icons/icons.icns"
+  },
+  "win": {
+    "target": [],
+    "artifactName": "${productName}_${arch}_${version}.${ext}",
+    "icon": "build/icons/icon.ico"
+  },
+  "publish": [
+    {
+      "provider": "generic",
+      "url": ""
+    }
+  ],
+  "releaseInfo": {},
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "deleteAppDataOnUninstall": false
+  },
+  "extraResources": [
+    {
+      "from": "resource/binary",
+      "to": "myResource/binary",
+      "filter": "${platform}/*"
+    },
+    {
+      "from": "resource/libwebp",
+      "to": "myResource/libwebp",
+      "filter": "${platform}/*/**"
+    }
+  ]
+}

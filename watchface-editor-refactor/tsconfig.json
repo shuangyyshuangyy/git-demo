@@ -1,0 +1,18 @@
+{
+  "extends": "./paths.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "skipDefaultLibCheck": true,
+    "noImplicitReturns": false
+  }
+}
